@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+      <TITLE>Sum</TITLE>
+
+      <script type="text/javascript">
+        function sum()
+        {
+            var num1 = document.myform.number1.value;
+            var num2 = document.myform.number2.value;
+            var sum = parseInt(num1) + parseInt(num2);
+        
+            document.getElementById('lightattack').value = sum;
+            const array = [num1,num2];
+            var HeavyAttack=1
+             
+            for(let i = 0; i < 1; i++){
+                var x = array[i].split(",")
+                var y = x[1]
+            if(x[0]="2"){
+                HeavyAttack=parseInt(array[i])+HeavyAttack;
+                document.getElementById('heavyattack').value=HeavyAttack;
+            }
+            else{
+                HeavyAttack=HeavyAttack
+            }
+        }
+           
+        }
+
+        function sum1(){
+            var num1 = document.myform.engine.value;
+            document.getElementById('add').value=num1
+        }
+      </script>
+    </HEAD>
+
+    <BODY>
+      <FORM NAME="myform">
+        <select name="number1">
+            <option value=2>lightbattery1</option>
+            <option value=3>light battery2</option>
+            <option value="2,4">heavy battery</option>
+        </select>
+    
+        <select name="number2">
+            <option value=2>lightbattery1</option>
+            <option value=3>light battery2</option>
+            <option value="2,4">heavy battery</option>
+        </select>
+
+        <select name="engine">
+            <option value=20>engine1</option>
+            <option value=30>engine2</option>
+        </select>
+    
+        <INPUT TYPE="button" NAME="button" Value="Calculate" onClick="sum(),sum1()"/>
+        <br>
+        Light Attack<INPUT TYPE="text" ID="lightattack" NAME="result" VALUE=""/>
+        <br>
+        Heavy Attack<INPUT TYPE="text" ID="heavyattack" NAME="result" VALUE=""/>
+        <br>
+        Speed<INPUT TYPE="text" ID="add" NAME="result" VALUE=""/>
+        
+      </FORM>
+
+    </BODY>
+</HTML>
